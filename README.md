@@ -1,1 +1,1 @@
-# augmented-localized-error-vue
+# vue-localized-status
