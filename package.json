@@ -1,14 +1,20 @@
 {
   "name": "augmented-localized-error-vue",
   "version": "0.1.0",
-  "private": true,
+  "files": [
+    "/dist",
+    "package-lock.js"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:web": "vue-cli-service build",
+    "build:lib": "rm -rf dist && vue-cli-service build --target lib --name augmented-localized-error-vue src/lib-entrypoint.ts",
     "lint": "vue-cli-service lint",
+    "lint-fix": "tslint --fix -c tslint.json -p tsconfig.lint.json",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "localized-error": "^1.4.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -21,5 +27,18 @@
     "chai": "^4.1.2",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.6.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jblew/augmented-localized-error-vue"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "Jędrzej Lewandowski <jedrzejblew@gmail.com> (https://jedrzej.lewandowski.doctor/)",
+  "license": "GPL-3.0-OR-LATER",
+  "bugs": {
+    "url": "https://github.com/Jblew/augmented-localized-error-vue/issues"
   }
 }
